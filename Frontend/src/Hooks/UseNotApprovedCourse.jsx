@@ -8,7 +8,7 @@ export default function UseFetchNotApprovedCourse() {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://dec-online-otal.vercel.app/api/admin/courses/inactive`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://deconline.senaycreatives.com/api/admin/courses/inactive`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechNotApprovedCourses'],  queryFn: Fetchcourse })

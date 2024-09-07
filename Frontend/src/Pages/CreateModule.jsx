@@ -50,7 +50,7 @@ export default function CreateModule() {
         formData.append('video', Video);
       }
   
-      const response = await axios.post(`https://dec-online-otal.vercel.app/api/admin/${courseid}/createModule`, formData, {
+      const response = await axios.post(`https://deconline.senaycreatives.com/api/admin/${courseid}/createModule`, formData, {
         headers: {
           '_auth': `${authHeader}`,
           'Content-Type': 'multipart/form-data'

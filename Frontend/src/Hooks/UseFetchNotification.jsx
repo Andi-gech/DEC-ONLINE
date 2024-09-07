@@ -8,7 +8,7 @@ export default function UseFetchNotification() {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://dec-online-otal.vercel.app/api/Notfication`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://deconline.senaycreatives.com/api/Notfication`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechNotification'],  queryFn: Fetchcourse })

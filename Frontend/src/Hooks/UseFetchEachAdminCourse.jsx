@@ -8,7 +8,7 @@ export default function UseFetchEachAdminCourse(id) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://dec-online-otal.vercel.app/api/admin/courses/${id}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://deconline.senaycreatives.com/api/admin/courses/${id}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechEachAdmincourses',id],  queryFn: Fetchcourse , enabled: !!id,})

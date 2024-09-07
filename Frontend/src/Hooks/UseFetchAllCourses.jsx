@@ -11,7 +11,7 @@ export default function UseFetchAllCourses(searchparams, selectedCategory) {
     };
 
     const Fetchcourse =async () => {
-        return await axios.get('https://dec-online-otal.vercel.app/api/courses', {
+        return await axios.get('https://deconline.senaycreatives.com/api/courses', {
             headers: { '_auth': authHeader },
             params: params, // Pass the params object here
         });

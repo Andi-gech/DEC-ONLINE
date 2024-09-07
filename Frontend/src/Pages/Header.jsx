@@ -87,7 +87,7 @@ export default function Header() {
     
       {data?.data.slice(0,2).map((item)=>{
         return(  <div className='w-[80%]   px-2 h-[50px]  hover:text-blue-800  cursor-pointer text-center ml-[30px]  shadow-sm     font-light text-[15px]  flex-row flex items-center '>
-        <img src={item?.profilepic?`https://dec-online-otal.vercel.app/images/${item?.profilepic}`:"https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt='user' className='h-[35px] w-[35px] rounded-full' /> 
+        <img src={item?.profilepic?`https://deconline.senaycreatives.com/images/${item?.profilepic}`:"https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt='user' className='h-[35px] w-[35px] rounded-full' /> 
         <div className='flex   w-[170px]  flex-col justify-center  pl-3 items-start'>
           <p className='m-0 p-0 dark:text-white text-gray-700  font-normal    text-sm  '>Mr. {item.fullName}</p>
           {/* <p className=' font-serif text-[12px]  text-gray-600'>Accountant</p> */}

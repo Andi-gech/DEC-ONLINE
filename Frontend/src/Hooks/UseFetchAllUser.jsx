@@ -8,7 +8,7 @@ export default function UseFetchAllUser() {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://dec-online-otal.vercel.app/api/user/all`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://deconline.senaycreatives.com/api/user/all`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['FetchAlluser'], queryFn: Fetchcourse ,})

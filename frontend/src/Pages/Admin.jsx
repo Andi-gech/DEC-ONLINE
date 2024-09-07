@@ -33,7 +33,7 @@ export default function Admin() {
     
 
     try {
-      const response = await axios.post('http://localhost:8080/api/admin/createCourse', formData, {
+      const response = await axios.post('https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/admin/createCourse', formData, {
         headers: {
           '_auth': authHeader,
           'Content-Type': 'multipart/form-data'

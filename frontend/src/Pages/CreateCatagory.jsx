@@ -17,7 +17,7 @@ export default function CreateCategory() {
 
         try {
             const response = await axios.post(
-                'http://localhost:8080/api/admin/createCatagory',
+                'https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/admin/createCatagory',
                 formData,
                 { headers: { '_auth': `${authHeader}`, 'Content-Type': 'multipart/form-data' } }
             );

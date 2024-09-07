@@ -10,7 +10,7 @@ export default function AdminUser() {
     const navigate = useNavigate()
     const queryClient=useQueryClient()
     const mutation=useMutation({
-       mutationFn: (id)=>axios.delete(`http://localhost:8080/api/user/${id}`),
+       mutationFn: (id)=>axios.delete(`https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/user/${id}`),
 mutationKey:['deleteuser'],
 onSuccess:()=>{
     console.log('deleted')

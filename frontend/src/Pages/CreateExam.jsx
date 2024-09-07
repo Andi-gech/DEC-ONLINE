@@ -53,7 +53,7 @@ const CreateExam = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:8080/api/admin/', {
+      const response = await axios.post('https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/admin/', {
         title: title,
         passingMarks: passingMarks,
         duration: duration,

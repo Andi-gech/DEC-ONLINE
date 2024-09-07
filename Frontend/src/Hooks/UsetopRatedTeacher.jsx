@@ -8,7 +8,7 @@ export default function UseTopratedUser()  {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/user/teacher`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-otal.vercel.app/api/user/teacher`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['TopRated'],  queryFn: Fetchcourse })

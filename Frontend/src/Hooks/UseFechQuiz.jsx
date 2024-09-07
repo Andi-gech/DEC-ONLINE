@@ -8,7 +8,7 @@ export default function UseFetchQuiz(id) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/exams/${id}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-otal.vercel.app/api/exams/${id}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechquiz',id],  queryFn: Fetchcourse , enabled: !!id, refetchOnWindowFocus: false})

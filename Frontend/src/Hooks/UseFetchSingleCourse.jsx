@@ -8,7 +8,7 @@ export default function UseFetchSingleCourse(id) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/courses/${id}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-otal.vercel.app/api/courses/${id}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['Course',id], queryFn: Fetchcourse,enabled: !!id  })

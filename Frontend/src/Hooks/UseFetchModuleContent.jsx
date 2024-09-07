@@ -8,7 +8,7 @@ export default function UseFetchModuleContent(moduleid) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/coursemodule/${moduleid}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-otal.vercel.app/api/coursemodule/${moduleid}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['CourseModuleContent',moduleid], queryFn: Fetchcourse,enabled: !!moduleid })

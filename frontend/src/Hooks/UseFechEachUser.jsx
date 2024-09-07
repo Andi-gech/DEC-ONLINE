@@ -8,7 +8,7 @@ export default function UseFetchEachUser(id) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/user/${id}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/user/${id}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechedEachUser',id],  queryFn: Fetchcourse , enabled: !!id, refetchOnWindowFocus: false})

@@ -8,7 +8,7 @@ export default function UseFetchSingleEnrollCourse(id) {
 
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/enroll/${id}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/enroll/${id}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['SingleEnrollCourse',id], queryFn: Fetchcourse })

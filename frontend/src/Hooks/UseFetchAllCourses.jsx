@@ -11,7 +11,7 @@ export default function UseFetchAllCourses(searchparams, selectedCategory) {
     };
 
     const Fetchcourse =async () => {
-        return await axios.get('http://localhost:8080/api/courses', {
+        return await axios.get('https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/courses', {
             headers: { '_auth': authHeader },
             params: params, // Pass the params object here
         });

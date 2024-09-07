@@ -7,7 +7,7 @@ export default function UseFetchCatagories() {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://localhost:8080/api/coursecatagory`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://dec-online-xek6-r74pfr2fz-andigechs-projects.vercel.app/api/coursecatagory`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fechCatagories'],  queryFn: Fetchcourse })

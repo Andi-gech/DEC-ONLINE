@@ -26,6 +26,7 @@ import PaymentManagment from './Components/PaymentManagment';
 import AdminUserDetail from './Pages/AdminUserDetail';
 import Achievement from './Pages/Achievement';
 import Settings from './Pages/Settings';
+import LandingPage from './Pages/LandingPage';
 
 function App() {
   const location = useLocation();
@@ -54,7 +55,9 @@ function App() {
         <Route path="/enroll/:courseid" element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['student']} children={<><Header /><EnrollPage /></>}/></RequireAuth>} />
         <Route path='/Achievment' element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['student']} children={<><Header /><Achievement/></>} /></RequireAuth>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<LandingPage />} />
         <Route path='/settings' element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['student','teacher']} children={<><Settings/></>}/></RequireAuth>} />
         <Route path="Adminstrator/MyCourse/add" element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['teacher']} children={<><AdminHeader /><Admin /></>} /></RequireAuth>} />
         

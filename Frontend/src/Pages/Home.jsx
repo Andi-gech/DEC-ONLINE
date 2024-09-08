@@ -1,37 +1,33 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { IoSearch } from 'react-icons/io5';
 import { TbDots } from 'react-icons/tb';
-import CourseCard from '../Components/CourseCard';
 
 
 
-import VerticalProgressBar from '../Components/VerticalProgressBar';
-import Loading from './Loading';
+
 import useAuthUser from 'react-auth-kit/hooks/useAuthUser';
 import { MdEmail } from 'react-icons/md';
 
 import ErrorPage from './ErrorPage';
-import { BiErrorCircle } from 'react-icons/bi';
 import images from '../assets/im.jpg'
-import { Bars, ColorRing } from 'react-loader-spinner'
-import { FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
+import { Bars } from 'react-loader-spinner'
 import { Link } from 'react-router-dom';
 import UseFetchCatagories from '../Hooks/UseFetchCatagories';
 
 import UseFetchAllCourses from '../Hooks/UseFetchAllCourses';
 
 import UseFetchAllEnrolles from '../Hooks/UseFetchAllEnrolles';
-import { AiFillStar,AiOutlineBars,AiOutlineUser } from 'react-icons/ai';
+import { AiFillStar } from 'react-icons/ai';
 import UseFetchEachUser from '../Hooks/UseFechEachUser';
 
-const SlideCards=React.lazy(()=>import('../Components/SlideCards'))
+import SlideCards from '../Components/SlideCards';
 
 export default function Home() {
   const authUser = useAuthUser()
   const [searchparams,setSearchParams]=useState(null)
   const [selecetedCatagory,setSelecetedCatagory]=useState()
-  const [loaded,setloaded]=useState(false)
+  const []=useState(false)
   const { data:userdata, refetch:reftchuser } = UseFetchEachUser(authUser?._id);
   useEffect(() => {
     reftchuser()
@@ -46,15 +42,6 @@ export default function Home() {
     })
     return (sum/data?.length).toFixed(2)
   }
-    const generateGraph = () => {
-        const graphs = []
-        for (let i = 0; i < 7; i++) {
-          const percent = Math.floor(Math.random() * 101)
-          graphs.push(<VerticalProgressBar key={i} keys={i} percent={percent} />)
-        }
-        return graphs
-      }
-      const graphList = generateGraph()
 
 
       let {data,isLoading,isError,error}=UseFetchAllEnrolles()
@@ -194,18 +181,9 @@ export default function Home() {
   </div>
  
   <div className='w-[90%] flex flex-row    '>
-    <Suspense fallback={<ColorRing
-  visible={true}
-  height="40"
-  width="40"
-  ariaLabel="color-ring-loading"
-  wrapperStyle={{}}
-  wrapperClass="color-ring-wrapper"
-  colors={['blue','blue','blue','blue','blue','blue','blue']}
-  />
-  }>
+    
    <SlideCards isLoading={(isLoading||searchisLoading)} data={data}/>
-   </Suspense>
+ 
   
   
 

@@ -8,7 +8,7 @@ export default function UseTopratedUser()  {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://deconline.senaycreatives.com/api/user/teacher`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`http://deconline.senaycreatives.com/api/user/teacher`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['TopRated'],  queryFn: Fetchcourse })

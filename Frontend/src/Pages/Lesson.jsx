@@ -37,7 +37,7 @@ export default function Lesson() {
   const authHeader = useAuthHeader();
 
 const mutation = useMutation({
-  mutationFn: async (data) => await axios.put(`https://deconline.senaycreatives.com/api/user/rate/${courseData?.data?.createdBy._id}`, data, {
+  mutationFn: async (data) => await axios.put(`http://deconline.senaycreatives.com/api/user/rate/${courseData?.data?.createdBy._id}`, data, {
         headers: {
           '_auth': authHeader
         },
@@ -54,7 +54,7 @@ const mutation = useMutation({
       moduleid: selectedModule || courseData?.data?.coursemodules[0]?._id
     };
     try {
-      const result = await axios.put(`https://deconline.senaycreatives.com/api/enroll/${courseid}/completemodule`, requestBody, {
+      const result = await axios.put(`http://deconline.senaycreatives.com/api/enroll/${courseid}/completemodule`, requestBody, {
         headers: {
           '_auth': authHeader
         },
@@ -124,7 +124,7 @@ const mutation = useMutation({
             <div className="w-full h-full">
               {courseDetail?.data?.videolink &&
               <video className="w-full h-full" autoPlay controls>
-                <source src={'https://deconline.senaycreatives.com/'+courseDetail?.data?.videolink} type="video/mp4" />
+                <source src={'http://deconline.senaycreatives.com/'+courseDetail?.data?.videolink} type="video/mp4" />
               </video>}
             </div>
           </div>

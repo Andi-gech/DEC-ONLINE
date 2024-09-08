@@ -10,7 +10,7 @@ export default function AdminUser() {
     const navigate = useNavigate()
     const queryClient=useQueryClient()
     const mutation=useMutation({
-       mutationFn: (id)=>axios.delete(`https://deconline.senaycreatives.com/api/user/${id}`),
+       mutationFn: (id)=>axios.delete(`http://deconline.senaycreatives.com/api/user/${id}`),
 mutationKey:['deleteuser'],
 onSuccess:()=>{
     console.log('deleted')

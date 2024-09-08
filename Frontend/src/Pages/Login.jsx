@@ -18,7 +18,7 @@ export default function Login({props}) {
   const auth = useAuthUser()
   const post=async()=>{
 
-    return await axios.post('https://deconline.senaycreatives.com/api/user/Auth', { email:Email, password });
+    return await axios.post('http://deconline.senaycreatives.com/api/user/Auth', { email:Email, password });
   }
 
   const mutation=useMutation({

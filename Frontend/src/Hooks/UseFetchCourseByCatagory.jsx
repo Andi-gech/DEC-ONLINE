@@ -8,7 +8,7 @@ export default function UseFetchCourseByCatagory(catagoryid) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`https://deconline.senaycreatives.com/api/courses/catagory/${catagoryid}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`http://deconline.senaycreatives.com/api/courses/catagory/${catagoryid}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['FetchByCatagory',catagoryid],  queryFn: Fetchcourse , enabled: !!catagoryid,})

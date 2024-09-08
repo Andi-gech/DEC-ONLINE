@@ -8,7 +8,7 @@ export default function UseFetchAllEnrolles() {
 
     const Fetchcourse=()=>{
 
-        return axios.get('https://deconline.senaycreatives.com/api/enroll',{headers:{'_auth':`${authHeader}`}})
+        return axios.get('http://deconline.senaycreatives.com/api/enroll',{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['fetchAllEnrolles'], queryFn: Fetchcourse })

@@ -22,7 +22,7 @@ export default function EnrollPage() {
   const authHeader = useAuthHeader()
   const navigate = useNavigate()
   const mutation=useMutation({
-    mutationFn:()=>axios.post(`https://deconline.senaycreatives.com/api/enroll/pay/${courseid}`,{},{
+    mutationFn:()=>axios.post(`http://deconline.senaycreatives.com/api/enroll/pay/${courseid}`,{},{
       headers: {
         '_auth': authHeader
       },
@@ -51,7 +51,7 @@ export default function EnrollPage() {
         </div>
         </div>}
         {error && <div className='absolute z-[100] top-[80px] right-[100px]'><ErrorPopup error={error}/></div>}
-      <img src={`https://deconline.senaycreatives.com/images/${course?.data?.image}`} className='w-[450px] h-[350px]  rounded-md'/>
+      <img src={`http://deconline.senaycreatives.com/images/${course?.data?.image}`} className='w-[450px] h-[350px]  rounded-md'/>
       {/* <div  className=' h-[200px] ml-5'>
         
       
@@ -93,7 +93,7 @@ export default function EnrollPage() {
         <div className="flex w-full h-[50px] my-5 sm:my-0 flex-row items-center justify-start">
          
           <img src={'https://picsum.photos/200'} className='w-[40px] h-[40px] rounded-full'/>
-          <p className='mx-2 text-[17px] text-gray-800 dark:text-white font-bold'>{course?.data?.createdBy.fullName}</p>
+          <p className='mx-2 text-[17px] text-gray-800 dark:text-white font-bold'>{course?.data?.createdBy?.fullName}</p>
         </div>
         <div className='sm:w-[400px] w-full overflow-y-auto overflow-x-hidden '>
           <p className=' mx-3 font-bold  dark:text-white text-slate-900 line-clamp-3'>{course?.data?.description}</p></div>

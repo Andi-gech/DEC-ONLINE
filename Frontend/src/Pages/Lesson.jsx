@@ -77,7 +77,7 @@ const mutation = useMutation({
   // (enroll?.data?.completedModules?.length === courseData?.data?.coursemodules?.length &&!userrated)
   return (
     <div className="sm:ml-[18%] relative items-center w-[100%] min-h-screen  flex   flex-col md:flex-row  dark:bg-slate-950  bg-white rounded-md ">
-      {(enroll?.data?.completedModules?.length === courseData?.data?.coursemodules?.length &&!userrated) && (
+      {((enroll?.data?.completedModules?.length === courseData?.data?.coursemodules?.length )&&!userrated&&(enroll?.data?.completedModules?.length===0)) && (
         <div className="fixed top-0 z-20 backdrop-blur-sm left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
           <div className=' relative w-[400px] h-[300px]  dark:bg-slate-950 bg-white shadow-gray-600 shadow-sm rounded-md flex flex-col items-center justify-center'>
             <img src={celebration}  className='w-full object-cover h-[300px] absolute  top-0 '/>

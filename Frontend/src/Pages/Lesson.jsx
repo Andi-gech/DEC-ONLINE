@@ -72,8 +72,8 @@ const mutation = useMutation({
   const isCompleted = enroll?.data?.completedModules?.some(module => module.id === (selectedModule || courseData?.data?.coursemodules[0]?._id));
   useEffect(() => {
    
-    setUserrated(courseData?.data?.createdBy.rating.some(rate => rate.user ===enroll?.data?.user ))
-  },[courseData?.data?.createdBy.rating, enroll?.data?.user])
+    setUserrated(courseData?.data?.createdBy?.rating?.some(rate => rate.user ===enroll?.data?.user ))
+  },[courseData?.data?.createdBy?.rating, enroll?.data?.user])
   // (enroll?.data?.completedModules?.length === courseData?.data?.coursemodules?.length &&!userrated)
   return (
     <div className="sm:ml-[18%] relative items-center w-[100%] min-h-screen  flex   flex-col md:flex-row  dark:bg-slate-950  bg-white rounded-md ">

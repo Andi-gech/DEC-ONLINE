@@ -33,7 +33,7 @@ export default function Admin() {
     
 
     try {
-      const response = await axios.post('http://deconline.senaycreatives.com/api/admin/createCourse', formData, {
+      const response = await axios.post('https://deconline.senaycreatives.com/api/admin/createCourse', formData, {
         headers: {
           '_auth': authHeader,
           'Content-Type': 'multipart/form-data'

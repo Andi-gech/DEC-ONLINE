@@ -17,7 +17,7 @@ export default function CreateCategory() {
 
         try {
             const response = await axios.post(
-                'http://deconline.senaycreatives.com/api/admin/createCatagory',
+                'https://deconline.senaycreatives.com/api/admin/createCatagory',
                 formData,
                 { headers: { '_auth': `${authHeader}`, 'Content-Type': 'multipart/form-data' } }
             );

@@ -31,7 +31,7 @@ export default function Exam() {
  const authHeader = useAuthHeader()
     const Result =async () =>{
       console.log(examAnswers,'answers')
-      const res=await axios.post(`http://deconline.senaycreatives.com/api/enroll/exam/${examid}/evaluate`,{answers:examAnswers},{headers:{'_auth':`${authHeader}`}})
+      const res=await axios.post(`https://deconline.senaycreatives.com/api/enroll/exam/${examid}/evaluate`,{answers:examAnswers},{headers:{'_auth':`${authHeader}`}})
    if(res.status==200){
     console.log(res)
     console.log(res,"res")

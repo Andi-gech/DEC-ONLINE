@@ -8,7 +8,7 @@ export default function UseFetchAllModules(courseid) {
     
     const Fetchcourse=()=>{
 
-        return axios.get(`http://deconline.senaycreatives.com/api/coursemodule/course/${courseid}`,{headers:{'_auth':`${authHeader}`}})
+        return axios.get(`https://deconline.senaycreatives.com/api/coursemodule/course/${courseid}`,{headers:{'_auth':`${authHeader}`}})
     }
   
     return useQuery({ queryKey: ['FetchAllModules',courseid], queryFn: Fetchcourse , enabled: !!courseid,})

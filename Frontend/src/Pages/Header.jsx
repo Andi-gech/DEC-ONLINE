@@ -58,7 +58,7 @@ export default function Header() {
     <div className=' h-[90px] w-full px-2 flex flex-row items-center justify-between  '>
     <img src={logo} className='w-[50px]   h-[50px]'/>
     <div className=' ml-2  h-full flex flex-col items-start justify-center'>
-    <p className=' font-bold text-xl  font-j   dark:text-white  text-black   '>Dec Online</p>
+    <p className=' font-bold text-xl  font-j   dark:text-white  text-black   '>DEC Online</p>
     <p className='  text-[12px]  font-j dark:text-white text-black  font-bold '>Online Education Service</p>
     </div>
     <Switcher/>
@@ -87,7 +87,7 @@ export default function Header() {
     
       {data?.data.slice(0,2).map((item)=>{
         return(  <div className='w-[80%]   px-2 h-[50px]  hover:text-blue-800  cursor-pointer text-center ml-[30px]  shadow-sm     font-light text-[15px]  flex-row flex items-center '>
-        <img src={item?.profilepic?`http://deconline.senaycreatives.com/images/${item?.profilepic}`:"https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt='user' className='h-[35px] w-[35px] rounded-full' /> 
+        <img src={item?.profilepic?`https://deconline.senaycreatives.com/images/${item?.profilepic}`:"https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt='user' className='h-[35px] w-[35px] rounded-full' /> 
         <div className='flex   w-[170px]  flex-col justify-center  pl-3 items-start'>
           <p className='m-0 p-0 dark:text-white text-gray-700  font-normal    text-sm  '>Mr. {item.fullName}</p>
           {/* <p className=' font-serif text-[12px]  text-gray-600'>Accountant</p> */}

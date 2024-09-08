@@ -53,7 +53,7 @@ const CreateExam = () => {
     });
 
     try {
-      const response = await axios.post('http://deconline.senaycreatives.com/api/admin/', {
+      const response = await axios.post('https://deconline.senaycreatives.com/api/admin/', {
         title: title,
         passingMarks: passingMarks,
         duration: duration,

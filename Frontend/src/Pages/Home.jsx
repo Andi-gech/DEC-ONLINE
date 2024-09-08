@@ -234,7 +234,7 @@ export default function Home() {
       <img src={item?.course?.createdBy?.profilepic?`https://deconline.senaycreatives.com/images/${item?.course?.createdBy?.profilepic}`:'https://cdn-icons-png.flaticon.com/512/149/149071.png'} className='w-[50px] h-[50px] rounded-full object-cover'/>
     
      
-    <p className='text-[14px] mx-2 font-bold'>{item?.course.createdBy.fullName}</p>
+    <p className='text-[14px] mx-2 font-bold'>{item?.course?.createdBy?.fullName}</p>
       </div>
     
     <div className='flex flex-row'>

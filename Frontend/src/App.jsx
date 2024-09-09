@@ -27,7 +27,7 @@ import AdminUserDetail from './Pages/AdminUserDetail';
 import Achievement from './Pages/Achievement';
 import Settings from './Pages/Settings';
 import LandingPage from './Pages/LandingPage';
-
+import Teams from './Pages/Teams';
 function App() {
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
@@ -58,6 +58,7 @@ function App() {
         <Route path="/home" element={<Home/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<LandingPage />} />
+        <Route path="/teams" element={<Teams />} />
         <Route path='/settings' element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['student','teacher']} children={<><Settings/></>}/></RequireAuth>} />
         <Route path="Adminstrator/MyCourse/add" element={<RequireAuth fallbackPath='/login'><RoleAuthentication allowedRoles={['teacher']} children={<><AdminHeader /><Admin /></>} /></RequireAuth>} />
         

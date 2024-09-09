@@ -92,8 +92,19 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
+            <section className="py-16 bg-white">
+                <div className=" flex items-center justify-center flex-col mx-auto text-center">
+                    <h3 className="text-3xl font-bold mb-8">What Inspired Us</h3>
+                        <div className="bg-gray-100 p-6 rounded-md shadow-md">
+                            <p className="italic text-gray-600">"As university students in sub-Saharan Africa, we are acutely aware of the barriers to quality education. Our diverse backgrounds reveal a landscape where access to learning resources is often limited by geography, financial constraints, and inadequate infrastructure. Inspired by our shared experiences, we envisioned an online platform that democratizes education, making it accessible to all, regardless of location or socioeconomic status.
 
+The digital revolution offers unprecedented opportunities for learning, and we sought to harness this potential. Our platform aims to bridge the educational divide, providing interactive resources, peer support, and expert guidance. We believe in the power of collaboration and knowledge sharing, which can uplift entire communities. By creating this app, we aim to empower learners, foster innovation, and inspire a new generation of thinkers and leaders, transforming challenges into opportunities for growth in our vibrant region."</p>
+                            <button onClick={() => navigate('/teams')} className="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md">Meet the Team`</button>
+                    </div>
+                
+                </div>
+            </section>                
             <section className="bg-blue-500 py-16 text-center text-white">
                 <h4 className="text-3xl font-bold mb-4">Start Learning Today</h4>
                 <p className="text-lg mb-6">Join thousands of learners around the globe.</p>

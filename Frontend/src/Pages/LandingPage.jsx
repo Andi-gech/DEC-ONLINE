@@ -73,6 +73,14 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
+            <section className="py-16 bg-white">
+            
+                <div className=" flex items-center justify-center flex-col mx-auto text-center">
+                    <h3 className="text-3xl font-bold mb-8">Live Demo</h3>
+                    <iframe width="760" height="425" src="https://www.youtube.com/embed/CXgBPCI8OsU?si=i7Mn7BLUOF52eCqm"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+
+                </section>
 
             <section className="py-16 bg-white">
                 <div className="max-w-6xl mx-auto text-center">
